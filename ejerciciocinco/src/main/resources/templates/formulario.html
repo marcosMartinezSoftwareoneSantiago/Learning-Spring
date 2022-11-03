@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='formulario' >
+        <meta name='description' content='Formulario de credenciales para el acceso' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Formulario de acceso</title>
+    </head>
+    <body>
+        <form th:action="@{/home}" method="post">
+            <label>Usuario: <input type="text" name="username"></label>
+            <br>
+            <label>contraseña: <input type="password" name="password"></label>
+            <br>
+            <button type="submit">Acceder</button>
+        </form>
+        <p th:if="${username != null}">Usuario <span th:text="${username}"></span> no autorizado</p>
+        
+        </body>
+</html>

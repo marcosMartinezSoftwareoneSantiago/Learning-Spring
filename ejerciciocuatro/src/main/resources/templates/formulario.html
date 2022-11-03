@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='Formulario' >
+        <meta name='description' content='recoger usuario y contraseña para enviarlo por post' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Formulario</title>
+    </head>
+    <body>
+        <form th:action="@{/formulario/otro-metodo}" method="post">
+            <label>Usuario: <input type="text" name="username"/></label>
+            <br>
+            <label>Email: <input type="text" name="email"/></label>
+            <button type="submit">Enviar</button>
+        </form>
+    </body>
+</html>

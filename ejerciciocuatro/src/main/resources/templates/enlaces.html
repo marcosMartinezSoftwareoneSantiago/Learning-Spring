@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='enlaces' >
+        <meta name='description' content='enlaces que al hacer click en ellos enviarán un parámetro get “id” con valores 1 y 2 respectivamente para cada uno de los enlaces. Este parámetro id será capturado por otro método del controlador y lo renderizará en una vista html' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Enlaces</title>
+    </head>
+    <body>
+        <a th:href="@{/otro-metodo(id=1, action='GET')}">ID 1</a>
+        <a th:href="@{/otro-metodo(id=2, action='GET')}">ID 2</a>
+    </body>
+</html>
