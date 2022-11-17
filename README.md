@@ -56,3 +56,8 @@ Crea tres registros en la base de datos y la funcionalidad para poder introducir
 
 
 ## 11.- Usando el mismo proyecto que en los ejercicios anteriores, crea una tabla html para renderizar todos los zapatos de la base de datos donde tendrás un botón a la derecha de cada registro "Eliminar" que permita eliminar el zapato de la base de datos.
+
+
+## 12.- Crea un api rest que genere un endpoint que sirva  para eliminar registros de la base de datos.
+
+## 13.- Con la base del ejercicio anterior genera un endpoint que sirva para hacer búsquedas por algún atributo de la entidad que no sea el id.
