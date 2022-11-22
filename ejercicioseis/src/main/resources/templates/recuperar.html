@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th='http://www.thymeleaf.org'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='Recuperar Coches' >
+        <meta name='description' content='Página que muestra los coches guardados en la base de datos' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Recuperar Coches</title>
+    </head>
+    <body>
+        <h1>Coches en la base de datos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="coche : ${coches}">
+                    <td th:text="${coche.id}"></td>
+                    <td th:text="${coche.marca}"></td>
+                    <td th:text="${coche.modelo}"></td>
+                    <td th:text="${coche.precio}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
