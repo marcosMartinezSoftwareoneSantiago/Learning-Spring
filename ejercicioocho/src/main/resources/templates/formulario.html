@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='Introducir nuevos inmuebles' >
+        <meta name='description' content='8.- Crea una aplicación con Spring Boot que se conecte a un base de datos llamada "inmobiliaria". Crea una tabla llamada "inmuebles" con los siguientes campos: - id(PK, AUTOINCREMENTAL), metros_cuadrados, precio. Construye la funcionalidad para poder guardar inmuebles a en la base de datos través de un formulario.' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Introducir inmuebles</title>
+    </head>
+    <body>
+        <h1>Introducir nuevo inmueble</h1>
+        <form action="@{/introducir}" th:object="${inmueble}" method="post">
+            <input type="number" th:field="*{metrosCuadrados}" placeholder="metros cuadrados">
+            <input type="number" th:field="*{precio}" placeholder="Precio (€)">
+            <button type="submit">Insertar</button>
+        </form>
+    </body>
+</html>
