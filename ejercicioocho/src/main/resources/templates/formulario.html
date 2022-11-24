@@ -13,10 +13,24 @@
     </head>
     <body>
         <h1>Introducir nuevo inmueble</h1>
-        <form action="@{/introducir}" th:object="${inmueble}" method="post">
-            <input type="number" th:field="*{metrosCuadrados}" placeholder="metros cuadrados">
-            <input type="number" th:field="*{precio}" placeholder="Precio (€)">
-            <button type="submit">Insertar</button>
+        <form action="@{/introducir}" th:object="${inmueble}" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th><label>Metros cuadrados</label></th>
+                        <th><label>Precio</label></th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td><input type="number" th:field="*{metrosCuadrados}" /></td>
+                        <td><input type="number" th:field="*{precio}" /></td>
+                    </tr>
+                    <tr>
+                        <td></td><td>
+                            <button type="submit">Insertar</button>
+                        </td>
+                    </tr>
+            </table>
         </form>
     </body>
 </html>

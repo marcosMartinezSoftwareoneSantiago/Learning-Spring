@@ -24,7 +24,7 @@ public class InmuebleController {
     @PostMapping("/introducir")
     public String nuevoInmueble(Inmueble inmueble){
         inmuebleService.introducir(inmueble);
-        return "redirect:/formulario";
+        return "formulario"; // Sin redirect://
     }
 
 }

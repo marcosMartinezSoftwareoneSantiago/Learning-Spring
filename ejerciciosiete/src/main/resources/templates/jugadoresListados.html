@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th='http://www.thymeleaf.org'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='Lista de jugadores de la nba' >
+        <meta name='description' content='http://localhost:8080/lista-jugadores -> La posición es en la que juega el jugador (alero, base, pivot,..)' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Lista de jugadores de la nba</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Posición</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="jugador : ${jugadores}" >
+                    <td th:text="${jugador.nombre} + ' ' + ${jugador.apellidoUno} + ' ' + ${jugador.apellidoDos}"></td>
+                    <td th:text="${jugador.posicion}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
