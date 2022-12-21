@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <meta name='title' content='zapato en función de su id' >
+        <meta name='description' content='Visualización de las propiedades de un zapato en una lista desordenado' >
+        <meta name='author' content='Marcos Martinez' >
+        <meta name='language' content='es' >
+        <meta name='owner' content='SoftwareOne' >
+        <title>Propiedades de un zapato en función de su id</title>
+    </head>
+    <body>
+        <ul>
+            <li>id: <span th:text="${id}"></span></li>
+            <li>Marca: <span th:text="${marca}"></span></li>
+            <li>Número: <span th:text="${numero}"></span></li>
+            <li>Precio: <span th:text="${precio}"></span></li>
+        </ul>
+    </body>
+</html>
